@@ -1,3 +1,12 @@
 .header {
-    background-color: lightgrey;
+    background-color: #BEFFB6;
+}
+
+.info {
+    border: 2px solid #BEFFB6;
+    background-color: #BEFFB6;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 30%;
 }
