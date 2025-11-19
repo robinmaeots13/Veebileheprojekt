@@ -1,9 +1,10 @@
 .header {
     background-color: #C9DFB0;
-    font-family: 'Yuji Syuku';
+    font-family: 'Yuji Syuku', serif;
+    color: #573E3E;
     text-align: center;
     font-size: 25px;
-    color: #573E3E;
+    padding: 5px;    
 }
 
 .info {
@@ -24,7 +25,7 @@
     width: 30%;
 }
 
-h1, h3 {
+h3 {
     color: #875858;
     background-color: #f8ece1;
     font-size: 50px;
