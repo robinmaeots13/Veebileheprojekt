@@ -1,10 +1,15 @@
+body {
+    margin: 0;
+    background-color: #EFE8dF;
+}
+
 .header {
     background-color: #C9DFB0;
     font-family: 'Yuji Syuku', serif;
     color: #573E3E;
     text-align: center;
-    font-size: 35px;
-    padding: 25px 0;    
+    font-size: 25px;
+    padding: 25px 0;
 }
 
 .pildid {
@@ -20,7 +25,8 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 120px;
+    gap: 250px;
+    padding: 25px;
 }
 
 .tutvustus {
@@ -44,18 +50,21 @@
     width: 400px;
     height: 300px;
     padding: 10px;
-    
+    line-height: 1.45;
+    text-align: justify;
 }
 
 .kaunistus {
     color: #DC9797;
+    border: 2px #EFE8dF;
     font-family: 'Yuji Syuku', serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 400%;
     text-align: center;
-    
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
 }
-
 
 .info {
     border: 2px solid #BEFFB6;
