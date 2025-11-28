@@ -109,3 +109,72 @@ h3 {
 .kass {
     background-color: #b7cfb2;
 }
+
+.ristsõna {
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Yuji Syuku', serif;
+    color: #573E3E;
+}
+
+table {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #EFE8dF;
+    margin-bottom: 20px;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+.dark {
+    background: #EFE8dF;
+}
+
+.inpt {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #EFE8dF;
+    font-family: 'Yuji Syuku', serif;
+    background-color: #C9DFB0;
+}
+
+.grupp {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.kollaaž {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.pilt1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.headerlink {
+    color: inherit;        
+    text-decoration: none; 
+}
+
+.headerlink:visited {
+    color: inherit;           
+}
+
+.headerlink:hover {
+    color: inherit;           
+    text-decoration: none;    
+}
+
+.headerlink:active {
+    color: inherit;
+}
