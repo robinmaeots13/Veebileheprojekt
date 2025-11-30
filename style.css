@@ -40,12 +40,12 @@ body {
 }
 
 .kiri {
-    border: 2px, #EFE8dF;
+    border: 2px #EFE8dF;
     padding: 10px;
 }
 
 .sisu {
-    border: 2px, #C9DFB0;
+    border: 2px #C9DFB0;
     background-color: #C9DFB0;
     width: 400px;
     height: 300px;
