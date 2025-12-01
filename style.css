@@ -70,36 +70,3 @@ body {
     font-size: 400%;
     text-align: center;
 }
-
-.info_kass {
-    border: 2px solid #ae8c8c;
-    background-color: #efdfdf;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: 30%;
-}
-
-h3 {
-    color: #875858;
-    background-color: #f8ece1;
-    font-size: 50px;
-    font-family: 'Gambetta';
-    text-align: left;
-}
-
-h3 {
-    font-size: 36px;
-    display: inline;
-}
-
-
-
-.pilt-konteiner {
-    display: flex;
-    justify-content: center;
-}
-
-.kass {
-    background-color: #b7cfb2;
-}
