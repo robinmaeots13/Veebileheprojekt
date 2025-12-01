@@ -1,0 +1,242 @@
+/* lehe kujunduseks inspiratsioon suuresti https://neocities.org/browse?tag=scrapbooking */
+/* lehe taust: https://in.pinterest.com/pin/926123110874824651/ muutsin canvas natuke aga põhi oli see */
+/* ümbrik: https://www.vecteezy.com/vector-art/26971155-closed-envelope-flat-monochrome-isolated-vector-object-new-unfolded-letter-communication-editable-black-and-white-line-art-drawing-simple-outline-spot-illustration-for-web-graphic-design*/
+/* kleeps-1: https://kr.pinterest.com/pin/28077197672013786/*/
+/* kleeps-2: https://kr.pinterest.com/pin/3870349675229377/*/
+/* kleeps-3: https://dailydeliciousthai.blogspot.com/2021/02/tri-color-cat-bread.html*/
+/* modal-taust: https://in.pinterest.com/pin/34551122140577159/*/
+
+body {
+    margin:0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior: none;
+    background-image: url("lehe-taust.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    font-family: 'Yuji Syuku', serif;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #C9DFB0;
+    font-family: 'Yuji Syuku', serif;
+    color: #573E3E;
+    text-align: center;
+    font-size: 22px;
+    padding: 5px;  
+    border: 2px solid #495847; 
+     
+}
+
+.header a {
+    color: #573E3E;
+    text-decoration: none;
+}
+
+#enne.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+#minu_canvas {
+  border: 2px solid #888;
+  width: 700px;
+  height: 450px;
+  display: flex;
+  background-color: white;
+  
+}
+
+.juhend {
+    font-family: 'Yuji Syuku', serif;
+    width: 250px;
+    flex: 0 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #555;
+    background-color: #C9DFB0;
+    color: #573E3E;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#pärast.section {
+    padding: 30px;       
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -300px;
+}
+
+.ülemine-rida {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.alumine-rida {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    margin-left: 260px;
+
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 1.8s ease 2s;
+}
+
+.ümbrik-wrapper {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+.ümbrik {
+    width: 200px; 
+    height: 150px;
+}
+
+.kleeps {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.kleeps:hover {
+    transform: translate(-50%, -50%) rotate(8deg);
+    z-index: 101;
+}
+
+.alumine-rida.nähtav {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.peidetud {
+    display: none;
+}
+
+.valmis-pilt {
+    width: 550px;
+    height: 420px;
+    border: 2px solid #495847;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.6s ease;
+    display: inline;
+    margin: 0;
+}
+
+.valmis-pilt.nähtav {
+    opacity: 1;
+    transform: translateX(180px);
+}
+
+.info-kogu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(-10px); 
+    transition: all 1.8s ease 2s; 
+}
+
+.info-kogu.nähtav {
+    opacity: 1;
+    transform: translateX(150px);
+}
+
+.info-header {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #573E3E;
+    background-color: #d6e1ca;
+    padding: 0; 
+    text-align: center;
+    
+}
+
+.info-kast {
+    font-family: 'Yuji Syuku', serif;
+    position: relative;
+    width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #555;
+    background-color: #C9DFB0;
+    color: #573E3E;
+    font-size: 22px;
+    text-align: center;
+}
+
+.modal {
+    position: fixed; 
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(128, 102, 102, 0.6);
+}
+
+.modal-content {
+    font-family: 'Yuji Syuku', serif;
+    margin: 15% auto;
+    padding: 40px;
+    width: 450px;
+    height: 300px; 
+    text-align: center;
+    background-image: url('modal-taust.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    color: #333;
+}
+
+.modal-pilt-tuust {
+    max-width: 50%; 
+    height: auto;
+    margin: 15px 0;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
