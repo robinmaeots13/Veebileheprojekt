@@ -40,7 +40,7 @@ function main() {
     addEventListeners();
 
     PILT = new Image();
-    PILT.src = "pildid/sipsik-j.jpg";
+    PILT.src = "pildid/Sipsik-j.jpg";
     PILT.onload = function(){
         handleResize();
         randomizeRaskus();
@@ -384,3 +384,4 @@ function kaugus(p1,p2) {
 
 
 window.onload = main;
+
