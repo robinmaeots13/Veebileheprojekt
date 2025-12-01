@@ -15,17 +15,17 @@ let PUSLE_VALMIS = false;
 let galeriiIndex = 0;
 let galeriiInterval = null;
 const galeriiPildid = [
-    "Sipsik-j.jpg",
-    "sipsik-vaatab.jpg",
-    "sipsik-uh.jpg",
-    "sipsik-tups.jpg",
-    "sipsik-s.jpg",
-    "sipsik-lips.jpg",
-    "sipsik-keerd.jpg",
-    "sipsik-huh.jpg",
-    "sipsik-haigutus.jpg",
-    "sipsik-ganst.jpg",
-    "sipsik-bleh.jpg"
+    "pildid/Sipsik-j.jpg",
+    "pildid/sipsik-vaatab.jpg",
+    "pildid/sipsik-uh.jpg",
+    "pildid/sipsik-tups.jpg",
+    "pildid/sipsik-s.jpg",
+    "pildid/sipsik-lips.jpg",
+    "pildid/sipsik-keerd.jpg",
+    "pildid/sipsik-huh.jpg",
+    "pildid/sipsik-haigutus.jpg",
+    "pildid/sipsik-ganst.jpg",
+    "pildid/sipsik-bleh.jpg"
 ];
 
 
@@ -40,7 +40,7 @@ function main() {
     addEventListeners();
 
     PILT = new Image();
-    PILT.src = "sipsik-j.jpg";
+    PILT.src = "pildid/sipsik-j.jpg";
     PILT.onload = function(){
         handleResize();
         randomizeRaskus();
@@ -381,5 +381,6 @@ function kaugus(p1,p2) {
         (p1.x-p2.x)*(p1.x-p2.x) +
         (p1.y-p2.y)*(p1.y-p2.y));
 }
+
 
 window.onload = main;
