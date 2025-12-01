@@ -1,29 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kass</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipsiku Puzzle</title>
+  <link rel="stylesheet" href="1lemmikloom.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <!--Kui lehel on oma ikoon siis mul pole aimugi miks sest ma algselt lisasin selle, siis võtsin ära, aga see siiski jäi-->
+
 </head>
-<body class="kass">
-    <h1>• Kass Sipsik  •</h1>
 
-    <h3>Punastest kassidest</h3><br>
-    
-    <div class="info_kass">
-        <p>
-        See leht tutvustab punast kassi nimega Sipsik
-        </p>
+<body>
+
+  <!--Kogu lehe päis, päise tekstile vajutades saab tagasi pealehele-->
+  <header class="header">
+        <h1><a href="pealeht.html" class="headerlink">• Kass Sipsik •</a></h1>
+  </header>
+
+  <!--Kuna leht on kahes osas siis esimene osa on pusle ning pusle juhend-->
+  <section id="enne" class="section">
+    <canvas id="minu_canvas" width="700" height="450"></canvas>
+  
+    <div class="juhend"> 
+      Lahenda pusle, et tutvuda kassiga Sipsik
+    </div>
+  </section>
+
+  <!--Lehe teine osa on peidetud kuni pusle on lahendatud, kui pusle on lahendatud siis enne osa asendatakse pärast osaga-->
+  <!--pärast osa koosneb pildi galeriist, info-kastist ning ümbrikutest, kust peale vajutades avaneb pop-up Sipsiku kohta käiva faktiga-->
+  <section id="pärast" class="section peidetud">
+
+    <div class="ülemine-rida">
+      <div id="infoKast" class="info-kogu">
+        <h2 class="info-header"> Punasest kassist nimega Sipsik</h2>
+        <div class="info-kast">
+          <p>Tegemist on kõige kahtlasema kassiga,
+            keda sa eales kohtad. 15 aastat noor, ta on 
+            pühendanud oma elu kulisklemisele. Tal on ka elav noorem vend Vinku.
+            Sipsik peab ühist joont oma punaste liigikaaslastega,
+            olles armsalt hull.
+          </p>
+        </div>
+      </div>
+
+      <img id="galerii-img" class="valmis-pilt" src="Sipsik-j.jpg" alt="Sipsik" />
     </div>
 
-    <div class="pilt-konteiner">
-      <img
-        src="pildid/kass.jpg"
-        alt="Kass kellest jutt käib"
-        width="400"
-      />
+    <div class="alumine-rida">
+      <div class="ümbrik-wrapper" onclick="openModal('modal1')">
+        <img class="ümbrik" src="ümbrik-pilt.png" alt="Sipsik 1" />
+        <img class="kleeps" src="kleeps-1.png" alt="kleeps 1" />
+      </div>
+
+      <div class="ümbrik-wrapper" onclick="openModal('modal2')">
+        <img class="ümbrik" src="ümbrik-pilt.png" alt="Sipsik 2" />
+        <img class="kleeps" src="kleeps-2.png" alt="kleeps 2" />
+      </div>
+
+      <div class="ümbrik-wrapper" onclick="openModal('modal3')">
+        <img class="ümbrik" src="ümbrik-pilt.png" alt="Sipsik 3" />
+        <img class="kleeps" src="kleeps-3.png" alt="kleeps 3" />
+      </div>
     </div>
     
+  </section>
+
+  <div id="modal1" class="modal peidetud">
+    <div class="modal-content"> <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Sipsiku Lemmiktoit</h2>
+        <p>Lumi ja seinad</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal peidetud">
+      <div class="modal-content"> <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <h2>Sipsiku parim sõber</h2>
+          <img class="modal-pilt-tuust" src="tuust.jpg" alt="Tuust" />
+          <p>Tuust</p>
+      </div>
+  </div>
+
+  <div id="modal3" class="modal peidetud">
+      <div class="modal-content"> <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <h2>Sipsiku Hobid</h2>
+          <p>Diivani kraapimine, laisklemine ja öösel kräunumine</p>
+      </div>
+  </div>
+  
+
+  <script src="pusle.js"></script>
+
 </body>
 </html>
