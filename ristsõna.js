@@ -1,3 +1,4 @@
+//Javascrpti koodi alge sain Githubi repositooriumist crossword, mille tegi kasutaja bladerunr2049. Seda koodi on kohendatud vastavalt küsimustele ning stiili vastavalt leheküljele.
 const answers = {
     1: 'N',
     2: 'O',
